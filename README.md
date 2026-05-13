@@ -1,3 +1,3 @@
 # Personal site
 
-Build with `./build.sh`
+Build with `rm -rf docs && ./build.sh src docs`
