@@ -1,2 +1,3 @@
-# ryanfanchiotti.github.io
-personal site
+# Personal site
+
+Build with `./build.sh`
