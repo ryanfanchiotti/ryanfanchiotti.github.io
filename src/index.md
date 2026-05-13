@@ -1,37 +1,15 @@
 ---
-pagetitle: Ryan's page
+pagetitle: Ryan Fanchiotti's page
 ---
 
-## Ryan's page 
+## Ryan Fanchiotti
 
-:::: {style="display: flex; justify-content: space-between;"}
+### About me
+I'm currently in my senior year studying Computer Science at Binghamton University, where I've been working with [William Hallahan](https://billhallahan.github.io/) on making symbolic execution faster by integrating less widely used features of SMT solvers. I will be starting a PhD at NYU with [Evan Johnson]() in the fall.
 
-::: {}
-Shhhh.
+In my spare time, I'm a big fan of climbing, hiking, and all sorts of puzzles.
 
-- Yes
-- No
-- Secret third thing
-- $\lambda x. x$
-- [Here](https://cs.binghamton.edu/~rfanchi1)
-- [Google](https://google.com)
-- Some code: `c = a + 1`
-- [Blog](./blog)
-:::
+My email is ryan `[at]` rur `[dot]` com.
 
-::: {}
-![Me](./bear.jpg)
-:::
-
-::::
-
-Some more code:
-
-```c
-#include <stdio.h>
-
-int main() {
-    puts("Hello world!");
-}
-```
-
+### Links
+[github](https://github.com/ryanfanchiotti) [linkedin](https://linkedin.com/in/ryan-fanchiotti) [blog](./blog)

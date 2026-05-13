@@ -1,3 +1,8 @@
+---
+pagetitle: Ryan Fanchiotti's page
+---
+
 # Blog
 
-![Me](../bear/jpg)
+### Posts
+- [Hello world](./hello-world.html)
