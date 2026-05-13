@@ -2,7 +2,7 @@
 pagetitle: Ryan Fanchiotti's page
 ---
 
-# Blog
+## Blog
 
 ### Posts
 - [Hello world](./hello-world.html)

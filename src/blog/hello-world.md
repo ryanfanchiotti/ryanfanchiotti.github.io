@@ -2,6 +2,6 @@
 pagetitle: Ryan Fanchiotti's page
 ---
 
-# Hello world
+## Hello world
 
 Segmentation fault
