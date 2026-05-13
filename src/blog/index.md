@@ -1,0 +1,3 @@
+# Blog
+
+![Me](../bear/jpg)

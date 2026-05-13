@@ -16,10 +16,11 @@ Shhhh.
 - [Here](https://cs.binghamton.edu/~rfanchi1)
 - [Google](https://google.com)
 - Some code: `c = a + 1`
+- [Blog](./blog)
 :::
 
 ::: {}
-![Me](bear.jpg)
+![Me](./bear.jpg)
 :::
 
 ::::
