@@ -5,7 +5,7 @@ pagetitle: Ryan's page
 ## Ryan Fanchiotti
 
 ### About me
-I'm a first year PhD student at NYU, advised by [Evan Johnson](https://enjhnsn2.github.io/). I am broadly interested in the intersection of formal methods / verification and systems programming.
+I'm a first year PhD student at New York University, advised by [Evan Johnson](https://enjhnsn2.github.io/). I am broadly interested in the intersection of formal methods / verification and systems programming.
 
 I have a bachelor's degree in computer science from Binghamton University, where I worked with [William Hallahan](https://billhallahan.github.io/) on mitigating path explosion in symbolic execution using various capabilities of SMT solvers.
 
