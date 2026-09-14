@@ -1,15 +1,17 @@
 ---
-pagetitle: Ryan Fanchiotti's page
+pagetitle: Ryan's page
 ---
 
 ## Ryan Fanchiotti
 
 ### About me
-I'm currently in my senior year studying Computer Science at Binghamton University, where I've been working with [William Hallahan](https://billhallahan.github.io/) on making symbolic execution faster by integrating less widely used features of SMT solvers. I will be starting a PhD at NYU with [Evan Johnson]() in the fall of 2026.
+I'm a first year PhD student at NYU, advised by [Evan Johnson](https://enjhnsn2.github.io/). I am broadly interested in the intersection of formal methods / verification and systems programming.
 
-In my spare time, I'm a big fan of climbing, hiking, and all sorts of puzzles.
+I have a bachelor's degree in computer science from Binghamton University, where I worked with [William Hallahan](https://billhallahan.github.io/) on mitigating path explosion in symbolic execution using various capabilities of SMT solvers.
 
-My email is ryan `[at]` rur `[dot]` com.
+In my free time, I'm a big fan of climbing, hiking, and all sorts of puzzles.
+
+My email is `(\x -> x ++ "@rur.com") "ryan"`.
 
 ### Links
 [github](https://github.com/ryanfanchiotti) [linkedin](https://linkedin.com/in/ryan-fanchiotti) [blog](./blog)

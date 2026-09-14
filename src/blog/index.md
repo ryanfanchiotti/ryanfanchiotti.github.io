@@ -1,6 +1,7 @@
 ---
-pagetitle: Ryan Fanchiotti's page
+pagetitle: Ryan's page
 ---
+[Home](../)
 
 ## Blog
 

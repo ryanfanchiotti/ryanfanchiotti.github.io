@@ -1,7 +1,8 @@
 ---
-pagetitle: Ryan Fanchiotti's page
+pagetitle: Ryan's page
 ---
+[Home](../)
 
 ## Hello world
 
-Segmentation fault
+Welcome to my blBus error (core dumped)
