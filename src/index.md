@@ -11,7 +11,7 @@ I have a bachelor's degree in computer science from Binghamton University, where
 
 In my free time, I'm a big fan of climbing, hiking, and all sorts of puzzles.
 
-My email is `(\x -> x ++ "@rur.com") "ryan"`.
+My email is `(\x -> x ++ map succ "?qtq-bnl") "ryan"`.
 
 ### Links
 [github](https://github.com/ryanfanchiotti) [linkedin](https://linkedin.com/in/ryan-fanchiotti) [blog](./blog)
