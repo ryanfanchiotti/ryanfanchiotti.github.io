@@ -152,7 +152,7 @@ index 4349108e7..95e8ee297 100644
 
 Now we can do `FLUX_SYSROOT=<sysroot-from-script> make FLUX_CHECK=1 FLUX_DIRS=<driver-dir> <driver-dir>` and get errors from core, like:
 
-```
+```rust
 error[E0999]: refinement type error
    --> drivers/android/binder/node.rs:373:32
     |

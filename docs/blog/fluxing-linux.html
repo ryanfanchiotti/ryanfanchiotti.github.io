@@ -198,10 +198,12 @@ pre {
 white-space: pre;
 white-space: pre-wrap;
 word-wrap: break-word;
+overflow-x: auto;
+max-width: 100%;
 }
 pre.sourceCode {
 border: 1px solid #F9A825;
-overflow: hidden;
+overflow: auto;
 padding: 10px;
 }
 b, strong {
@@ -535,18 +537,18 @@ so here’s a little script to do it:</p>
 <span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>        $(call cmd,gen_objtooldep)</span>
 <span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a> endef</span></code></pre></div>
 <p>Now we can do
-<code>FLUX_SYSROOT=&lt;sysroot-from-script&gt; make FLUX_CHECK=1 FLUX_DIRS=drivers/android/binder/ drivers/android/binder/</code>
+<code>FLUX_SYSROOT=&lt;sysroot-from-script&gt; make FLUX_CHECK=1 FLUX_DIRS=&lt;driver-dir&gt; &lt;driver-dir&gt;</code>
 and get errors from core, like:</p>
-<pre><code>error[E0999]: refinement type error
-   --&gt; drivers/android/binder/node.rs:373:32
-    |
-373 |                 let list_arc = ListArc::try_from_arc(self.clone()).ok().unwrap();
-    |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ a precondition cannot be proved
-    |
-note: this is the condition that cannot be proved
-   --&gt; /home/ryan/Programs/flux/lib/flux-core/src/option.rs:46:24
-    |
- 46 |     #[sig(fn(Option&lt;T&gt;[true]) -&gt; T)]</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>error[E0999]<span class="op">:</span> refinement <span class="kw">type</span> error</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   --&gt; drivers/android/binder/node.rs:373:32</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    |</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>373 |                 let list_arc <span class="op">=</span> <span class="pp">ListArc::</span>try_from_arc(<span class="kw">self</span><span class="op">.</span>clone())<span class="op">.</span>ok()<span class="op">.</span>unwrap()<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span>                                <span class="op">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span> a precondition cannot be proved</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>note<span class="op">:</span> this is the condition that cannot be proved</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>   <span class="op">--&gt;</span> <span class="op">/</span>home<span class="op">/</span>ryan<span class="op">/</span>Programs<span class="op">/</span>flux<span class="op">/</span>lib<span class="op">/</span>flux<span class="op">-</span>core<span class="op">/</span>src<span class="op">/</span>option<span class="op">.</span>rs<span class="op">:</span><span class="dv">46</span><span class="op">:</span><span class="dv">24</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">46</span> <span class="op">|</span>     <span class="at">#[</span>sig<span class="at">(</span><span class="kw">fn</span><span class="at">(</span><span class="dt">Option</span><span class="op">&lt;</span>T<span class="op">&gt;</span>[<span class="cn">true</span><span class="at">]</span>) <span class="op">-&gt;</span> T)]</span></code></pre></div>
 <p>which asks you to prove that <code>unwrap()</code> is never called on
 a <code>None</code>.</p>
 <p>Note that if you get errors like this:</p>

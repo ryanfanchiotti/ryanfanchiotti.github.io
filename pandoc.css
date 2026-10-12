@@ -144,11 +144,13 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 pre.sourceCode {
   border: 1px solid #F9A825;
-  overflow: hidden;
+  overflow: auto;
   padding: 10px;
 }
 
