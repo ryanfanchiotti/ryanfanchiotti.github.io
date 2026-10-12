@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Ryan’s page</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } 
+code span.an { color: #008000; } 
+code span.at { } 
+code span.bu { } 
+code span.cf { color: #0000ff; } 
+code span.ch { color: #008080; } 
+code span.cn { } 
+code span.co { color: #008000; } 
+code span.cv { color: #008000; } 
+code span.do { color: #008000; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.im { } 
+code span.in { color: #008000; } 
+code span.kw { color: #0000ff; } 
+code span.op { } 
+code span.ot { color: #ff4000; } 
+code span.pp { color: #ff4000; } 
+code span.sc { color: #008080; } 
+code span.ss { color: #008080; } 
+code span.st { color: #008080; } 
+code span.va { } 
+code span.vs { color: #008080; } 
+code span.wa { color: #008000; font-weight: bold; } 
+</style>
+  <style type="text/css">
+html {
+font-size: 100%;
+overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+}
+body {
+color: #444;
+font-family: Times, 'Times New Roman', serif;
+font-size: 12px;
+line-height: 1.7;
+padding: 1em;
+margin: auto;
+max-width: 42em;
+background: #fafafa;
+}
+img {
+border-radius: 10px;
+width: 100%;
+height: auto;
+}
+a {
+color: #689F38;
+text-decoration: underline;
+text-decoration-color: #43403f;
+text-decoration-style: solid;
+text-decoration-thickness: 1px;
+text-underline-offset: 4px;
+}
+a:visited {
+color: #689F38;
+}
+a:hover {
+color: #9ac866;
+}
+a:active {
+color: #F9A825;
+}
+a:focus {
+outline: thin dotted;
+}
+*::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+*::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #000;
+}
+a::-moz-selection {
+background: rgba(255, 255, 0, 0.3);
+color: #689F38;
+}
+a::selection {
+background: rgba(255, 255, 0, 0.3);
+color: #689F38;
+}
+p {
+margin: 1em 0;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+color: #111;
+line-height: 125%;
+margin-top: 2em;
+font-weight: normal;
+}
+h4, h5, h6 {
+font-weight: bold;
+}
+h1 {
+font-size: 2.5em;
+}
+h2 {
+font-size: 2em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+font-size: 1.2em;
+}
+h5 {
+font-size: 1em;
+}
+h6 {
+font-size: 0.9em;
+}
+blockquote {
+color: #666666;
+margin: 0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr {
+display: block;
+height: 2px;
+border: 0;
+border-top: 1px solid #aaa;
+border-bottom: 1px solid #eee;
+margin: 1em 0;
+padding: 0;
+}
+pre, code, kbd, samp {
+color: #000;
+_font-family: monospace, monospace;
+font-family: courier, 'courier new', monospace;
+font-size: 0.9em;
+border-radius: 10px;
+}
+pre {
+white-space: pre;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+pre.sourceCode {
+border: 1px solid #F9A825;
+overflow: hidden;
+padding: 10px;
+}
+b, strong {
+font-weight: bold;
+}
+dfn {
+font-style: italic;
+}
+ins {
+background: #ff9;
+color: #000;
+text-decoration: none;
+}
+mark {
+background: #ff0;
+color: #000;
+font-style: italic;
+font-weight: bold;
+}
+sub, sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+sup {
+top: -0.5em;
+}
+sub {
+bottom: -0.25em;
+}
+ul, ol {
+margin: 1em 0;
+padding: 0 0 0 2em;
+}
+li p:last-child {
+margin-bottom: 0;
+}
+ul ul, ol ol {
+margin: .3em 0;
+}
+dl {
+margin-bottom: 1em;
+}
+dt {
+font-weight: bold;
+margin-bottom: .8em;
+}
+dd {
+margin: 0 0 .8em 2em;
+}
+dd:last-child {
+margin-bottom: 0;
+}
+img {
+border: 0;
+-ms-interpolation-mode: bicubic;
+vertical-align: middle;
+}
+figure {
+display: block;
+text-align: center;
+margin: 1em 0;
+}
+figure img {
+border: none;
+margin: 0 auto;
+}
+figcaption {
+font-size: 0.8em;
+font-style: italic;
+margin: 0 0 .8em;
+}
+table {
+margin-bottom: 2em;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+border-spacing: 0;
+border-collapse: collapse;
+}
+table th {
+padding: .2em 1em;
+background-color: #eee;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}
+table td {
+padding: .2em 1em;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+vertical-align: top;
+}
+.author {
+font-size: 1.2em;
+text-align: center;
+}
+@media only screen and (min-width: 480px) {
+body {
+font-size: 14px;
+}
+}
+@media only screen and (min-width: 768px) {
+body {
+font-size: 16px;
+}
+}
+@media print {
+* {
+background: transparent !important;
+color: black !important;
+filter: none !important;
+-ms-filter: none !important;
+}
+body {
+font-size: 12pt;
+max-width: 100%;
+}
+a, a:visited {
+text-decoration: underline;
+}
+hr {
+height: 1px;
+border: 0;
+border-bottom: 1px solid black;
+}
+a[href]:after {
+content: " (" attr(href) ")";
+}
+abbr[title]:after {
+content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+content: "";
+}
+pre, blockquote {
+border: 1px solid #999;
+padding-right: 1em;
+page-break-inside: avoid;
+}
+tr, img {
+page-break-inside: avoid;
+}
+img {
+max-width: 100% !important;
+}
+@page :left {
+margin: 15mm 20mm 15mm 10mm;
+}
+@page :right {
+margin: 15mm 10mm 15mm 20mm;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3 {
+page-break-after: avoid;
+}
+}
+</style>
+</head>
+<body>
+<p><a href="../">Home</a> <a href="./">Blog</a></p>
+<h2 id="patching-kbuild-to-run-flux">Patching Kbuild to run Flux</h2>
+<p><a href="https://github.com/flux-rs/flux">Flux</a> is a refinement
+type checker for Rust programs that has been used to verify properties
+of some cool existing programs, like the <a href="https://dl.acm.org/doi/10.1145/3731569.3764856">Tock</a> embedded
+OS. I was curious whether this was possible for Linux kernel drivers,
+since crashes in Windows drivers have notoriously <a href="https://www.theregister.com/software/2024/07/19/crowdstrike-file-update-bricks-pcs-around-the-world/670971">bricked
+many of the world’s computers at the same time</a>. It’s somewhat less
+known that a Linux version of a similar driver actually did nearly the
+<a href="https://access.redhat.com/solutions/7068083">same thing</a>!
+Using formal methods to prove that some of these crashes and other bad /
+undefined behaviors can’t happen would be great, and there’s a growing
+subset of drivers written in Rust that we can in theory check using
+Flux.</p>
+<p>Unfortunately it’s not as simple as just adding Flux as a dependency
+in your <code>Cargo.toml</code> and running <code>cargo flux</code> like
+you would with a crate, since Linux builds Rust modules using Kbuild,
+its Makefile based custom build system.</p>
+<p>I started by simply building the kernel. To do this with Rust modules
+enabled, I followed the Rust documentation for the kernel and downloaded
+the core source with <code>rustup component add rust-src</code>, after
+switching to nightly with <code>rustup default nightly</code>. I don’t
+think Linux technically supports the nightly rustc release but oh well,
+it should work. Note that the only reason we need nightly here is
+because Flux needs nightly and the compiler versions used to compile
+Flux and the kernel need to be identical.</p>
+<p>After making sure <code>make rustavailable</code> works properly
+(also make sure <code>export LLVM=1</code> is set, or pass it to all
+make runs), I enabled Rust, which was a bit of a pain, since it didn’t
+show up in the menu from <code>make menuconfig</code>. Turns out it was
+being blocked by <a href="https://www.phoronix.com/news/Linux-7.3-RandStruct-Rust">this
+feature</a>, which is currently being removed from the default config
+because it conflicts with Rust (woo).</p>
+<p>I then tried compiling a driver alone with
+<code>make drivers/android/binder/</code>. Note that some drivers may be
+modules, which require <code>M=</code> in front of the file path.</p>
+<p>Kbuild has support for running <a href="https://doc.rust-lang.org/clippy/">Clippy</a> on kernel drivers,
+and it does this by replacing rustc with Clippy when
+<code>make CLIPPY=1</code> is run, since Clippy is a rustc driver and
+accepts the same flags.</p>
+<p>Flux is also a rustc driver, but it doesn’t emit binaries like Clippy
+does, so we can’t directly replace rustc. A pretty simple hack to get
+around this is to just run Flux before rustc if a flag is set. I
+modified Kbuild to run Flux when <code>FLUX=1</code> is set.</p>
+<p>To get specs for Rust’s core from <code>flux_core</code> working, I
+needed a sysroot for Flux with it that matched the kernel build, which
+disables hardware floating point operations. This is a bit of a chore,
+so here’s a little script to do it:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#! /usr/bin/env bash</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> <span class="at">-euxo</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">[</span> <span class="st">&quot;</span><span class="va">${</span><span class="op">#</span><span class="va">}</span><span class="st">&quot;</span> <span class="ot">-ne</span> 5 <span class="bu">]</span><span class="kw">;</span> <span class="cf">then</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">&quot;usage: make-sysroot.sh KERNEL_DIR FLUX_REPO OUT_DIR FLUX_INSTALL_DIR RUSTC&quot;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">exit</span> 1</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">fi</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="va">KERNEL_DIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${1}</span><span class="st">&quot;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="va">FLUX_REPO</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${2}</span><span class="st">&quot;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="va">OUT_DIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${3}</span><span class="st">&quot;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="va">FLUX_INSTALL_DIR</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${4}</span><span class="st">&quot;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="va">RUSTC_BIN</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${5}</span><span class="st">&quot;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="va">TOOLCHAIN_DIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">dirname</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">dirname</span> <span class="st">&quot;</span><span class="va">${RUSTC_BIN}</span><span class="st">&quot;</span><span class="va">)</span><span class="st">&quot;</span><span class="va">)</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="va">DRIVER</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${FLUX_INSTALL_DIR}</span><span class="st">/flux-driver&quot;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">&quot;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="va">LD_LIBRARY_PATH</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${TOOLCHAIN_DIR}</span><span class="st">/lib:</span><span class="va">${LD_LIBRARY_PATH}</span><span class="st">&quot;</span> <span class="dt">\</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="va">RUSTC_BOOTSTRAP</span><span class="op">=</span>1 <span class="dt">\</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;</span><span class="va">${DRIVER}</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">${FLUX_REPO}</span><span class="st">/lib/flux-core/src/lib.rs&quot;</span> <span class="dt">\</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">--edition</span><span class="op">=</span>2024 <span class="dt">\</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">--crate-name</span> flux_core <span class="dt">\</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">--crate-type</span> rlib <span class="dt">\</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">--sysroot</span><span class="op">=</span>/dev/null <span class="dt">\</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">-L</span> <span class="st">&quot;</span><span class="va">${KERNEL_DIR}</span><span class="st">/rust/&quot;</span> <span class="dt">\</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">--target</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${KERNEL_DIR}</span><span class="st">/scripts/target.json&quot;</span> <span class="dt">\</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">--cfg</span> flux <span class="dt">\</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">--extern</span> <span class="st">&quot;flux_attrs=</span><span class="va">${FLUX_INSTALL_DIR}</span><span class="st">/libflux_attrs.so&quot;</span> <span class="dt">\</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">-Zallow-features</span><span class="op">=</span>register_tool,custom_inner_attributes,step_trait,sized_hierarchy,try_trait_v2 <span class="dt">\</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">-Zunstable-options</span> <span class="dt">\</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">-Fsysroot</span><span class="op">=</span><span class="st">&quot;</span><span class="va">${FLUX_INSTALL_DIR}</span><span class="st">&quot;</span> <span class="dt">\</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">-Fverify</span><span class="op">=</span>on <span class="dt">\</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">-Ffull-compilation</span><span class="op">=</span>on <span class="dt">\</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">--out-dir</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/&quot;</span> <span class="dt">\</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">--emit</span><span class="op">=</span>metadata=<span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/libflux_core.rmeta&quot;</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="st">&quot;</span><span class="va">${DRIVER}</span><span class="st">&quot;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/flux-driver&quot;</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="st">&quot;</span><span class="va">${FLUX_INSTALL_DIR}</span><span class="st">/libflux_attrs.so&quot;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/libflux_attrs.so&quot;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;[crates.flux_core]&#39;</span> <span class="op">&gt;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/sysroot.toml&quot;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;rmeta = &quot;libflux_core.rmeta&quot;&#39;</span> <span class="op">&gt;&gt;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/sysroot.toml&quot;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;fluxmeta = &quot;libflux_core.fluxmeta&quot;&#39;</span> <span class="op">&gt;&gt;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/sysroot.toml&quot;</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;extern_spec = true&#39;</span> <span class="op">&gt;&gt;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/sysroot.toml&quot;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;&#39;</span> <span class="op">&gt;&gt;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/sysroot.toml&quot;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;[crates.flux_attrs]&#39;</span> <span class="op">&gt;&gt;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/sysroot.toml&quot;</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&#39;dylib = &quot;libflux_attrs.so&quot;&#39;</span> <span class="op">&gt;&gt;</span> <span class="st">&quot;</span><span class="va">${OUT_DIR}</span><span class="st">/sysroot.toml&quot;</span></span></code></pre></div>
+<p>This was the final patch:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode patch"><code class="sourceCode diff"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">diff --git a/Makefile b/Makefile</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>index 7c855e6fe..bfdcd97bd 100644</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">--- a/Makefile</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">+++ b/Makefile</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">@@ -128,6 +128,12 @@ endif</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> export KBUILD_CLIPPY</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="va">+ifeq (&quot;$(origin FLUX_CHECK)&quot;, &quot;command line&quot;)</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="va">+  KBUILD_FLUX := $(FLUX_CHECK)</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="va">+endif</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="va">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="va">+export KBUILD_FLUX</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="va">+</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a> # Use make M=dir or set the environment variable KBUILD_EXTMOD to specify the</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a> # directory of external module to build. Setting M= takes precedence.</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a> ifeq (&quot;$(origin M)&quot;, &quot;command line&quot;)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="dt">@@ -550,6 +556,9 @@ RUSTC               = rustc</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a> RUSTDOC                = rustdoc</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a> RUSTFMT                = rustfmt</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a> CLIPPY_DRIVER  = clippy-driver</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="va">+FLUX        = flux</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="va">+FLUX_DIRS   ?= $(sort $(dir $(MAKECMDGOALS)))</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="va">+FLUXFLAGS   ?=</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a> BINDGEN                = bindgen</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a> PAHOLE         = pahole</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a> RESOLVE_BTFIDS = $(objtree)/tools/bpf/resolve_btfids/resolve_btfids</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="dt">@@ -644,7 +653,7 @@ export RUSTC_BOOTSTRAP := 1</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a> export CLIPPY_CONF_DIR := $(srctree)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a> export ARCH SRCARCH CONFIG_SHELL BASH HOSTCC KBUILD_HOSTCFLAGS CROSS_COMPILE LD CC HOSTPKG_CONFIG</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="st">-export RUSTC RUSTDOC RUSTFMT RUSTC_OR_CLIPPY_QUIET RUSTC_OR_CLIPPY BINDGEN LLVM_LINK</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="va">+export RUSTC RUSTDOC RUSTFMT RUSTC_OR_CLIPPY_QUIET RUSTC_OR_CLIPPY BINDGEN LLVM_LINK FLUX FLUX_DIRS FLUXFLAGS</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a> export HOSTRUSTC KBUILD_HOSTRUSTFLAGS</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a> export CPP AR NM STRIP OBJCOPY OBJDUMP READELF PAHOLE RESOLVE_BTFIDS LEX YACC AWK INSTALLKERNEL</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a> export PERL PYTHON3 CHECK CHECKFLAGS MAKE UTS_MACHINE HOSTCXX</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="kw">diff --git a/scripts/Makefile.build b/scripts/Makefile.build</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>index 4349108e7..95e8ee297 100644</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="dt">--- a/scripts/Makefile.build</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="dt">+++ b/scripts/Makefile.build</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="dt">@@ -352,7 +352,31 @@ quiet_cmd_rustc_o_rs = $(RUSTC_OR_CLIPPY_QUIET) $(quiet_modtag) $@</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>                $(cmd_ld_single)) \</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        $(cmd_objtool)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="va">+flux-enabled = $(if $(KBUILD_FLUX),$(filter $(FLUX_DIRS)%, $(obj)/))</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="va">+</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a><span class="va">+flux_allowed_features = $(rust_allowed_features),register_tool,custom_inner_attributes,stmt_expr_attributes</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="va">+flux_allowed_crate_features = $(rust_allowed_features),stmt_expr_attributes</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="va">+</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="va">+quiet_cmd_flux = FLUX $(quiet_modtag) $@</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="va">+         cmd_flux = OBJTREE=$(abspath $(objtree)) \</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="va">+       RUST_MODFILE=$(modfile) $(FLUX) $(rust_flags) \</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="va">+       -Zallow-features=$(flux_allowed_features) \</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="va">+       -Zunstable-options --extern pin_init --extern kernel \</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="va">+       --extern zerocopy --extern zerocopy_derive \</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="va">+       -Zcrate-attr=no_std \</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="va">+       -Zcrate-attr=&#39;feature($(flux_allowed_crate_features))&#39; \</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="va">+       -Fallow-raw-deref=ok \</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="va">+       -Fflux-verbose \</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="va">+       -Fstd-extern-specs \</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="va">+       -Finclude-trusted=rust/** \</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="va">+       $(FLUXFLAGS) \</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="va">+       --crate-type=rlib -L $(objtree)/rust/ \</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="va">+       --sysroot=/dev/null \</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="va">+       --cfg flux \</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="va">+       $&lt;</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="va">+</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a> define rule_rustc_o_rs</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="va">+       $(if $(flux-enabled),+$(call cmd,flux))</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>        $(call cmd_and_fixdep,rustc_o_rs)</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>        $(call cmd,gen_objtooldep)</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a> endef</span></code></pre></div>
+<p>Now we can do
+<code>FLUX_SYSROOT=&lt;sysroot-from-script&gt; make FLUX_CHECK=1 FLUX_DIRS=drivers/android/binder/ drivers/android/binder/</code>
+and get errors from core, like:</p>
+<pre><code>error[E0999]: refinement type error
+   --&gt; drivers/android/binder/node.rs:373:32
+    |
+373 |                 let list_arc = ListArc::try_from_arc(self.clone()).ok().unwrap();
+    |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ a precondition cannot be proved
+    |
+note: this is the condition that cannot be proved
+   --&gt; /home/ryan/Programs/flux/lib/flux-core/src/option.rs:46:24
+    |
+ 46 |     #[sig(fn(Option&lt;T&gt;[true]) -&gt; T)]</code></pre>
+<p>which asks you to prove that <code>unwrap()</code> is never called on
+a <code>None</code>.</p>
+<p>Note that if you get errors like this:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>error[E0425]<span class="op">:</span> cannot find function<span class="op">,</span> tuple <span class="kw">struct</span> or tuple variant `Err` <span class="kw">in</span> this scope</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>   <span class="op">--&gt;</span> drivers<span class="op">/</span>android<span class="op">/</span>binder<span class="op">/</span>transaction<span class="op">.</span>rs<span class="op">:</span><span class="dv">405</span><span class="op">:</span><span class="dv">48</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">405</span> <span class="op">|</span>                 <span class="pp">PushWorkRes::</span>FailedDead(me) <span class="op">=&gt;</span> <span class="cn">Err</span>((<span class="pp">BinderError::</span>new_dead()<span class="op">,</span> me))<span class="op">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">|</span>                                                <span class="op">^^^</span> not found <span class="kw">in</span> this scope</span></code></pre></div>
+<p>you’re most likely using a mismatched version of rustc, and will have
+to specify the correct one with
+<code>make RUSTC=&lt;correct-rustc&gt; ...</code></p>
+</body>
+</html>

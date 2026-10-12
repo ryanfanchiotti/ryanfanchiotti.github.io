@@ -12,7 +12,7 @@ html {
 
 body {
   color: #444;
-  font-family: Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  font-family: Times, 'Times New Roman', serif;
   font-size: 12px;
   line-height: 1.7;
   padding: 1em;
@@ -29,15 +29,19 @@ img {
 
 a {
   color: #689F38;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: #43403f;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 a:visited {
-  color: #822124;
+  color: #689F38;
 }
 
 a:hover {
-  color: #8BC34A;
+  color: #9ac866;
 }
 
 a:active {
@@ -49,22 +53,22 @@ a:focus {
 }
 
 *::-moz-selection {
-  background: rgba(208, 227, 131, 0.5);
+  background: rgba(255, 255, 0, 0.3);
   color: #000;
 }
 
 *::selection {
-  background: rgba(208, 227, 131, 0.5);
+  background: rgba(255, 255, 0, 0.3);
   color: #000;
 }
 
 a::-moz-selection {
-  background: rgba(208, 227, 131, 0.5);
+  background: rgba(255, 255, 0, 0.3);
   color: #689F38;
 }
 
 a::selection {
-  background: rgba(208, 227, 131, 0.5);
+  background: rgba(255, 255, 0, 0.3);
   color: #689F38;
 }
 
@@ -132,7 +136,7 @@ pre, code, kbd, samp {
   color: #000;
   _font-family: monospace, monospace;
   font-family: courier, 'courier new', monospace;
-  font-size: 0.98em;
+  font-size: 0.9em;
   border-radius: 10px;
 }
 

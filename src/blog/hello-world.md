@@ -1,7 +1,7 @@
 ---
 pagetitle: Ryan's page
 ---
-[Home](../)
+[Home](../) [Blog](./)
 
 ## Hello world
 

@@ -30,7 +30,7 @@ overflow-y: scroll;
 }
 body {
 color: #444;
-font-family: Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+font-family: Times, 'Times New Roman', serif;
 font-size: 12px;
 line-height: 1.7;
 padding: 1em;
@@ -45,13 +45,17 @@ height: auto;
 }
 a {
 color: #689F38;
-text-decoration: none;
+text-decoration: underline;
+text-decoration-color: #43403f;
+text-decoration-style: solid;
+text-decoration-thickness: 1px;
+text-underline-offset: 4px;
 }
 a:visited {
-color: #822124;
+color: #689F38;
 }
 a:hover {
-color: #8BC34A;
+color: #9ac866;
 }
 a:active {
 color: #F9A825;
@@ -60,19 +64,19 @@ a:focus {
 outline: thin dotted;
 }
 *::-moz-selection {
-background: rgba(208, 227, 131, 0.5);
+background: rgba(255, 255, 0, 0.3);
 color: #000;
 }
 *::selection {
-background: rgba(208, 227, 131, 0.5);
+background: rgba(255, 255, 0, 0.3);
 color: #000;
 }
 a::-moz-selection {
-background: rgba(208, 227, 131, 0.5);
+background: rgba(255, 255, 0, 0.3);
 color: #689F38;
 }
 a::selection {
-background: rgba(208, 227, 131, 0.5);
+background: rgba(255, 255, 0, 0.3);
 color: #689F38;
 }
 p {
@@ -127,7 +131,7 @@ pre, code, kbd, samp {
 color: #000;
 _font-family: monospace, monospace;
 font-family: courier, 'courier new', monospace;
-font-size: 0.98em;
+font-size: 0.9em;
 border-radius: 10px;
 }
 pre {
@@ -304,7 +308,9 @@ page-break-after: avoid;
 <h2 id="blog">Blog</h2>
 <h3 id="posts">Posts</h3>
 <ul>
-<li><a href="./hello-world.html">Hello world</a></li>
+<li><a href="./fluxing-linux.html">Patching Kbuild to run Flux</a>
+10/11/26</li>
+<li><a href="./hello-world.html">Hello world</a> 5/13/26</li>
 </ul>
 </body>
 </html>
