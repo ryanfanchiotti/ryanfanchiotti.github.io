@@ -167,6 +167,8 @@ note: this is the condition that cannot be proved
 
 which asks you to prove that `unwrap()` is never called on a `None`.
 
+We can now start adding refinement types to kernel functions!
+
 Note that if you get errors like this:
 
 ```rust

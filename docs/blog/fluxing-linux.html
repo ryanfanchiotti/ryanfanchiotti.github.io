@@ -551,6 +551,7 @@ and get errors from core, like:</p>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a> <span class="dv">46</span> <span class="op">|</span>     <span class="at">#[</span>sig<span class="at">(</span><span class="kw">fn</span><span class="at">(</span><span class="dt">Option</span><span class="op">&lt;</span>T<span class="op">&gt;</span>[<span class="cn">true</span><span class="at">]</span>) <span class="op">-&gt;</span> T)]</span></code></pre></div>
 <p>which asks you to prove that <code>unwrap()</code> is never called on
 a <code>None</code>.</p>
+<p>We can now start adding refinement types to kernel functions!</p>
 <p>Note that if you get errors like this:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>error[E0425]<span class="op">:</span> cannot find function<span class="op">,</span> tuple <span class="kw">struct</span> or tuple variant `Err` <span class="kw">in</span> this scope</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>   <span class="op">--&gt;</span> drivers<span class="op">/</span>android<span class="op">/</span>binder<span class="op">/</span>transaction<span class="op">.</span>rs<span class="op">:</span><span class="dv">405</span><span class="op">:</span><span class="dv">48</span></span>
