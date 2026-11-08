@@ -6,7 +6,7 @@ then
     exit 1
 fi
 
-# Sorry son, we have Hakyll at home
+# Sorry kid, we have Hakyll at home
 copy_files() {
     local src="${1:-.}"
     local dst="$2"
