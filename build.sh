@@ -25,7 +25,14 @@ copy_files() {
             echo "compiling markdown from ${file} to ${html_out}"
             # Make parent dir
             mkdir -p "${html_out%/*}"
-            pandoc -s -f markdown+fenced_divs --highlight-style haddock --embed-resources --standalone --css pandoc.css "${file}" -o "${html_out}"
+            pandoc -s -f markdown+fenced_divs \
+                --highlight-style haddock \
+                --embed-resources \
+                --standalone \
+                --css for_build/pandoc.css \
+                -V header-includes='<link rel="icon" type="image/png" href="for_build/favicon.png">' \
+                "${file}" \
+                -o "${html_out}"
         else 
             echo "copying ${file} to ${out}"
             rsync -a --mkpath "${file}" "${dst}/${stripped}"
