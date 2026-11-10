@@ -1,7 +1,7 @@
 ---
 pagetitle: Ryan's page
 ---
-[Home](../) [Blog](./)
+[Home](../../) [Blog](../)
 
 ## Patching Kbuild to run Flux
 
